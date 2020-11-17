@@ -402,12 +402,10 @@
         $sx = '<h1>' . msg('Dataset') . '</h1>';
         $csv = read_dataset();
         if (count($csv) > 0) {
-            $sx .= '<div class="col-12">';
+            $sx .= '<div class="col-12" id="checkit">';
             $sx .= dataset_checklist($csv);
             $sx .= '</div>';
         }
-
-
         /************************* NEW DATASET */
         $sx .= new_dataset();
         return ($sx);
@@ -426,7 +424,7 @@
         }
         if (strlen($file) > 0) {
             $sx = '<h1>' . msg('Saving_dataset') . '</h1>';
-            $csv = read_csv();
+            $csv = read_csv($file);
             $csv_json = json_encode($csv);
             file_put_contents($file_prj, $csv_json);
             $sx .= 'Saving ' . $file_prj;
@@ -435,7 +433,8 @@
         $sx .= '</div>';
         $sx .= '<script>
     function new_data_bt()
-    {				
+    {
+        $("#checkit").toggle("slow");				
         $("#new_dataset").toggle("slow");
     }
     </script>';
@@ -660,7 +659,7 @@
         $cr = chr(13) . chr(10);
         $txt = '';
 
-        /************* Diretorio */
+        /***************************************************** Diretorio */
         $prj = $_SESSION['project'];
         $prjds = 'collection';
         $d = 'projects/DIP/' . $prj;
@@ -668,20 +667,12 @@
             mkdir($d);
         }
 
+        /************************** Directories **************************/
+        $pdfs = 'projects/repository/' . $prj;
+        $local = "projects\\DIP\\" . $prj . '\\' . $folder;
+        $licence = file_get_contents('projects/licence/' . $prj . '.txt');
+        $metadata = read_metadados();
 
-        $df = fls('projects/repository/' . $prj);
-
-        /* Identificar arquivos para enviar */
-        /* Preparar coleção do diretorio */
-        $c = $ds[0];
-        /************** Checando variaveis */
-        $cedap = -1;
-        for ($r = 0; $r < count($c); $r++) {
-            $fld = $c[$r];
-            if (strpos($fld, 'CEDAP')) {
-                $cedap = $r;
-            }
-        }
         /****************************************************** ZIP FILE */
         $zip = new ZipArchive();
         $zipFile = "projects/DIP/" . $prj . "_dip.zip";
@@ -694,6 +685,7 @@
                 $txt .= '</div>';                
                 unlink($zipFile);
             }
+
         $txt .= '<div class="col-12">';
         $txt .= '<h2>Exportando para '.$zipFile.'</h2>';
         $txt .= '</div>';
@@ -702,18 +694,49 @@
             exit;
         }
 
-        /* HTML */
+        /****************************************************** HTML */
         $txt .= '<div class="col-12">';
         $txt .= '<ol>';        
-        $txt .= '<h5>Export</h5>';
+        $txt .= '<h5>Export</h5>';        
         
-
-        $metadata = read_metadados();
-        $licence = file_get_contents('projects/licence/' . $prj . '.txt');
-        for ($r = 1; $r < count($ds); $r++) {
-            $line = $ds[$r];
-            if (trim($line[$cedap]) == 'A') {
+        /************************************************************ DS */
+        for ($r=0;$r < count($ds);$r++)
+            {
+                $line = $ds[$r];
                 $id = $line[0];
+                
+                $pdf_file = $pdfs.'/'.$r.'.pdf';
+                if (file_exists($pdf_file))
+                    {
+                        $txt .= '<li>'.$pdf_file.'</li>';
+                        /* Item */
+                        $dr = '';
+                        /* Licence */
+                        file_put_contents($dr . '/license.txt', $licence);
+                    } else {
+                        echo '.';
+                    }
+            }
+        $txt .= '</ol>';
+        $txt .= '</div>';
+        return($txt);
+        /* Arquivo ZIP Fecha */
+        $zip->close();
+
+        /* HTML */
+
+
+        $sx = '<div class="row">';
+        $sx .= $txt;
+        $sx .= '<div class="col-12">';
+        $sx .= '<div class="alert alert-info" role="alert">'.msg('repository_DIP').'</div>';
+        $sx .= '</div>';
+        $sx .= '</div>';
+        return($sx);
+    }
+
+    function dip_create($id)
+        {
                 $line['handle'] = handle($id);
                 $dc_metadata = doblincore($line, $metadata);
                 $dr = $d . '/item_' . $id;
@@ -754,7 +777,7 @@
                 /**************** FILES */
                 file_put_contents($dr . '/handle', $line['handle'] . chr(10));
                 file_put_contents($dr . '/dublin_core.xml', $dc_metadata);
-                file_put_contents($dr . '/license.txt', $licence);
+                
                 file_put_contents($dr . '/contents', $contents);
 
                 $zip->addFile($dr . '/handle', $prjds.'/'.$id.'/'.'handle');
@@ -766,24 +789,8 @@
                 $zip->addFile($dr . '/dublin_core.xml', $prjds.'/'.$folder.'dublin_core.xml');
                 $zip->addFile($dr . '/license.txt', $prjds.'/'.$folder.'license.txt');
                 $zip->addFile($dr . '/contents', $prjds.'/'.$folder.'contents');
-                */
-            }
+                */            
         }
-        /* Arquivo ZIP Fecha */
-        $zip->close();
-
-        /* HTML */
-        $txt .= '</ol>';
-        $txt .= '</div>';
-
-        $sx = '<div class="row">';
-        $sx .= $txt;
-        $sx .= '<div class="col-12">';
-        $sx .= '<div class="alert alert-info" role="alert">'.msg('repository_DIP').'</div>';
-        $sx .= '</div>';
-        $sx .= '</div>';
-        return($sx);
-    }
 
     function doblincore($line, $meta)
     {
