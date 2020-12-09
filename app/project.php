@@ -662,8 +662,15 @@
         /***************************************************** Diretorio */
         $prj = $_SESSION['project'];
         $prjds = 'collection';
-        $d = 'projects/DIP/' . $prj;
+        $d = 'projects/DIP';
+        if (!is_dir($d)) { mkdir ($d); }
+
+        /******************************** Diretorio DIP do projeto */
+        $d .= '/' . $prj;
         if (!is_dir($d)) {
+            $txt .= '<div class="col-12">';
+            $txt .= '<div class="alert alert-success" role="alert">'.msg('CREATED_DIP').' '.$d.'</div>';
+            $txt .= '</div>';
             mkdir($d);
         }
 
@@ -700,28 +707,68 @@
         $txt .= '<h5>Export</h5>';        
         
         /************************************************************ DS */
-        for ($r=0;$r < count($ds);$r++)
+        for ($ri=0;$ri < count($ds);$ri++)
             {
-                $line = $ds[$r];
+                $line = $ds[$ri];
                 $id = $line[0];
                 
-                $pdf_file = $pdfs.'/'.$r.'.pdf';
+                $pdf_file = $pdfs.'/'.$id.'.pdf';
                 if (file_exists($pdf_file))
                     {
+                        $di = $d.'/'.$ri;
+                        $files = files_join($pdf_file);
+
                         $txt .= '<li>'.$pdf_file.'</li>';
-                        /* Item */
+                        /* Itens */
+                        $item = $d.'/'.$ri;
+                        if (!is_dir($item)) {
+                            mkdir($item);
+                        }
+
                         $dr = '';
+                        $content = '';
                         /* Licence */
-                        file_put_contents($dr . '/license.txt', $licence);
-                    } else {
-                        echo '.';
+                        file_put_contents($item . '/license.txt', $licence);
+
+                        /* Doblincore */
+                        $dc_metadata = doblincore($line, $metadata);
+                        file_put_contents($item . '/dublin_core.xml', $dc_metadata);
+
+                        /* Handle */
+                        $handle = handle($id);
+                        file_put_contents($item . '/handle', $handle);
+
+                        /* Arquivos */
+                        for ($f=0;$f < count($files);$f++)
+                        {
+                            $dest = $item.'/'.file_name($files[$f]);
+                            $orig = $files[$f];
+                            $destZIP = $ri.'/'.file_name($files[$f]);
+                            if (file_exists($orig))
+                                {
+                                    copy($orig,$dest);
+                                    $content = file_contents($content,$dest);
+                                    $zip->addFile($dest, $destZIP);
+                                }
+                        }
+                        /* Licence */
+                        file_put_contents($item . '/contents', $content);
+
+                        /* ZIP */
+                        $zip->addFile($di . '/handle', $ri.'/'.'handle');
+                        $zip->addFile($di . '/dublin_core.xml', $ri.'/'.'dublin_core.xml');
+                        $zip->addFile($di . '/license.txt', $ri.'/'.'license.txt');
+                        $zip->addFile($di . '/contents', $ri.'/'.'contents');
                     }
             }
         $txt .= '</ol>';
         $txt .= '</div>';
-        return($txt);
+
         /* Arquivo ZIP Fecha */
         $zip->close();
+
+        return($txt);
+        
 
         /* HTML */
 
@@ -735,61 +782,27 @@
         return($sx);
     }
 
-    function dip_create($id)
+    function file_name($f)
         {
-                $line['handle'] = handle($id);
-                $dc_metadata = doblincore($line, $metadata);
-                $dr = $d . '/item_' . $id;
-                if (!is_dir($dr)) {
-                    mkdir($dr);
+            while ($pos = strpos($f,'/'))
+                {
+                    $f = substr($f,$pos+1,strlen($f));
                 }
-                $dr .= '/1';
-                if (!is_dir($dr)) {
-                    mkdir($dr);
+            return($f);
+        }
+
+    function files_join($pdf_file)
+        {
+            $f = array($pdf_file);
+            for ($r=0;$r < 1000;$r++)
+                {
+                    $pdfv = str_replace('.pdf','-'.$r.'.pdf',$pdf_file);
+                    if (file_exists($pdfv))
+                        {
+                            array_push($f,$pdfv);
+                        }
                 }
-                /**************** FOLDER ZIP */
-                $folder = 'item_' . $id . '/1/';
-                $local = "projects\\DIP\\" . $prj . '\\' . $folder;
-
-                $contents = 'license.txt' . chr(9) . 'bundle:LICENSE' . $cr;
-                $file_found == false;
-                for ($f = 0; $f < count($df); $f++) {
-                    $fl = $df[$f][1];
-                    $flt = substr($fl, 0, strpos($fl, '.'));
-                    if ($flt == $id) {
-                        $contents .= $fl . chr(9) . 'bundle:ORIGINAL' . chr(9) . 'description:PDF File' . $cr;
-                        copy($df[$f][2], $dr . '/' . $fl);
-
-                        /*** ZIP FILE */
-                        $local_zip = $dr . '/' . $fl;
-                        $txt .= '<li style="color: green">'.$fl.' '.msg('exported').'</li>';
-                        $zip->addFile($local_zip,$prjds.'/'.$id.'/'.$fl);
-
-                        $file_found == true;
-                    }
-                }
-                if ($file_found == false)
-                    {
-                        $txt .= '<li style="color: red;">'.$id.' '.msg('not_found').'</li>';
-                    }
-                    
-
-                /**************** FILES */
-                file_put_contents($dr . '/handle', $line['handle'] . chr(10));
-                file_put_contents($dr . '/dublin_core.xml', $dc_metadata);
-                
-                file_put_contents($dr . '/contents', $contents);
-
-                $zip->addFile($dr . '/handle', $prjds.'/'.$id.'/'.'handle');
-                $zip->addFile($dr . '/dublin_core.xml', $prjds.'/'.$id.'/'.'dublin_core.xml');
-                $zip->addFile($dr . '/license.txt', $prjds.'/'.$id.'/'.'license.txt');
-                $zip->addFile($dr . '/contents', $prjds.'/'.$id.'/'.'contents');
-                /*
-                $zip->addFile($dr . '/handle', $prjds.'/'.$folder.'handle');
-                $zip->addFile($dr . '/dublin_core.xml', $prjds.'/'.$folder.'dublin_core.xml');
-                $zip->addFile($dr . '/license.txt', $prjds.'/'.$folder.'license.txt');
-                $zip->addFile($dr . '/contents', $prjds.'/'.$folder.'contents');
-                */            
+            return($f);
         }
 
     function doblincore($line, $meta)
@@ -798,20 +811,6 @@
         $cr = chr(10);
         $sx = '<?xml version="1.0" encoding="utf-8" standalone="no"?>' . $cr;
         $sx .= '<dublin_core schema="dc">' . $cr;
-        /*
-              <dcvalue element="contributor" qualifier="author">Gabriel&#x20;Junior,&#x20;Rene&#x20;Faustino</dcvalue>
-              <dcvalue element="date" qualifier="accessioned">2019-08-12T01:44:44Z</dcvalue>
-              <dcvalue element="date" qualifier="available">2019-08-12T01:44:44Z</dcvalue>
-              <dcvalue element="date" qualifier="issued">2019</dcvalue>
-              <dcvalue element="identifier" qualifier="uri">http:&#x2F;&#x2F;hdl.handle.net&#x2F;20.500.11959&#x2F;1198</dcvalue>
-              <dcvalue element="description" qualifier="abstract" language="pt_BR">Dados&#x20;das&#x20;análise&#x20;do&#x20;FENÔMENO&#x20;DAS&#x20;TIPOLOGIAS&#x20;DE&#x20;AUTORIA&#x20;NAS&#x20;REVISTAS&#x20;DE&#x20;CIÊNCIA&#x20;DA&#x20;INFORMAÇÃO&#x20;PUBLICADA&#x20;NO&#x20;BRASIL.</dcvalue>
-              <dcvalue element="description" qualifier="provenance" language="en">Submitted&#x20;by&#x20;Rene&#x20;Faustino&#x20;Gabriel&#x20;Junior&#x20;(renefgj@gmail.com)&#x20;on&#x20;2019-08-12T01:44:44Z&#x0A;No.&#x20;of&#x20;bitstreams:&#x20;1&#x0A;Dados-limpos-2.xlsx:&#x20;6531347&#x20;bytes,&#x20;checksum:&#x20;979b6191e5ca8ee7396123bef85f39a7&#x20;(MD5)</dcvalue>
-              <dcvalue element="description" qualifier="provenance" language="en">Made&#x20;available&#x20;in&#x20;DSpace&#x20;on&#x20;2019-08-12T01:44:44Z&#x20;(GMT).&#x20;No.&#x20;of&#x20;bitstreams:&#x20;1&#x0A;Dados-limpos-2.xlsx:&#x20;6531347&#x20;bytes,&#x20;checksum:&#x20;979b6191e5ca8ee7396123bef85f39a7&#x20;(MD5)&#x0A;&#x20;&#x20;Previous&#x20;issue&#x20;date:&#x20;2019</dcvalue>
-              <dcvalue element="subject" qualifier="none" language="pt_BR">Produção&#x20;científica</dcvalue>
-              <dcvalue element="subject" qualifier="none" language="pt_BR">Coautoria</dcvalue>
-              <dcvalue element="subject" qualifier="none" language="pt_BR">Autoria&#x20;única</dcvalue>
-              <dcvalue element="title" qualifier="none" language="pt_BR">FENÔMENO&#x20;DAS&#x20;TIPOLOGIAS&#x20;DE&#x20;AUTORIA&#x20;NAS&#x20;REVISTAS&#x20;DE&#x20;CIÊNCIA&#x20;DA&#x20;INFORMAÇÃO&#x20;PUBLICADA&#x20;NO&#x20;BRASIL</dcvalue>
-            */
 
         for ($r = 0; $r < count($meta); $r++) {
             if ($meta['field' . $r] >= 0) {
@@ -819,9 +818,12 @@
                 $fld = $dc[$idm];
                 $pre = substr($fld, 0, strpos($fld, '.'));
                 $quali = substr($fld, strpos($fld, '.') + 1, strlen($fld));
+                if (strlen($line[$r]) > 0)
+                {
                 $sx .= '<dcvalue element="' . $pre . '" qualifier="' . $quali . '">';
                 $sx .= ($line[$r]);
                 $sx .= '</dcvalue>' . $cr;
+                }
             }
         }
         //$sx .= '<dcvalue element="identifier" qualifier="handle">'.$line['handle'].'</dcvalue>'.$cr;
@@ -830,14 +832,16 @@
         return ($sx);
     }
 
-    function file_contents()
+    function file_contents($fc='',$file='',$type='ORIGINAL')
     {
         $cr = chr(10);
-        $sx = '';
-        $sx .= 'license.txt bundle:LICENSE' . $cr;
-        $sx .= 'Dados-limpos-2.xlsx bundle:ORIGINAL	description:Planilha de dados' . $cr;
+        if (strlen($fc) == 0)
+            {
+                $fc .= 'license.txt	bundle:LICENSE' . $cr;
+            }
 
-        return ($sx);
+        $fc .= file_name($file).'	bundle:'.$type.'	description:'.file_name($file) . $cr;
+        return ($fc);
     }
 
     function handle($id)
@@ -846,7 +850,7 @@
         $pre = '100';
         $idn = $id;
         while (strlen($idn) < 8) { $idn = '0'.$idn; }
-        $handle = '200.500.11959/' . $pre . $idn;
+        $handle = '20.500.11959/' . $pre . $idn;
         $file = 'handle';
         return ($handle);
     }
