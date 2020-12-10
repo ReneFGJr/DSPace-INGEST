@@ -1,5 +1,9 @@
 # DSPace-INGEST
  Sistemas para admissão de pacotes DIP no DSpace
+ 
+ Para executar, rode o batch "r.bat"
+ 
+ Depois acesso o navegador no endereço "https://localhost:3333"
 
  Pré-requisitos 
  - Microsoft Visual C++ 2015
