@@ -21,7 +21,7 @@ function app_mainmenu()
     $txt .= '<nav class="navbar navbar-light bg-light">';
     $txt .= '<a class="navbar-brand" href="/">';
     $txt .= '<img src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">';
-    $txt .= ' CEDAP Ingest - DIP <sup>v.0.01</sup>';
+    $txt .= ' CEDAP Ingest - DIP <sup>v.0.02</sup>';
     $txt .= '</a>';
     $txt .= '<ul class="nav">';
     $txt .= '<li class="nav-item">';

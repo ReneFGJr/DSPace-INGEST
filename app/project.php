@@ -34,9 +34,9 @@
             echo '</div>';
             echo '</div>';
             break;
-        case 'doublecore':
+        case 'dublincore':
             echo '<div class="col-12">';
-            echo project_doublecore();
+            echo project_dublincore();
             echo '</div>';
             break;
         case 'repository':
@@ -401,13 +401,14 @@
     {
         $sx = '<h1>' . msg('Dataset') . '</h1>';
         $csv = read_dataset();
+        $sx .= new_dataset();
         if (count($csv) > 0) {
             $sx .= '<div class="col-12" id="checkit">';
             $sx .= dataset_checklist($csv);
             $sx .= '</div>';
         }
         /************************* NEW DATASET */
-        $sx .= new_dataset();
+        
         return ($sx);
     }
 
@@ -423,21 +424,23 @@
             $file = $_FILES['userfile']['tmp_name'];
         }
         if (strlen($file) > 0) {
+            $prj = id_project();
+            $file_prj = 'projects/dataset/' . $prj . '.json';
+
             $sx = '<h1>' . msg('Saving_dataset') . '</h1>';
             $csv = read_csv($file);
             $csv_json = json_encode($csv);
             file_put_contents($file_prj, $csv_json);
             $sx .= 'Saving ' . $file_prj;
-            $sx .= dataset_checklist($csv);
         }
         $sx .= '</div>';
         $sx .= '<script>
-    function new_data_bt()
-    {
-        $("#checkit").toggle("slow");				
-        $("#new_dataset").toggle("slow");
-    }
-    </script>';
+            function new_data_bt()
+            {
+                $("#checkit").toggle("slow");				
+                $("#new_dataset").toggle("slow");
+            }
+            </script>';
         return ($sx);
     }
     function id_project()
@@ -485,14 +488,19 @@
         $metadados = read_metadados();
         $crosswalk = 0;
 
-        $sxmeta = '';
+        $sxmeta = '<div class="row">';
         foreach ($metadados as $field => $value) {
             if ($value >= 0) {
                 $crosswalk = 1;
                 $idv = substr($field, 5, 3);
-                $sxmeta .= '<br>' . $dc[$value] . ' => ' . (string)($csv[0][$idv]);
+                $dcv = (string)($csv[0][$idv]);
+                $dcv = preg_replace('/u([\da-fA-F]{4})/', '&#x\1;', $dcv);
+                $dcv = str_replace('\\','',$dcv);
+                $sxmeta .= '<div class="col-md-3 text-center" style="border:1px solid #aaa;"><b>' . $dc[$value] . '</b><br> ' . $dcv.'</div>';
             }
         }
+        $sxmeta .= '</div>';
+        $sxmeta .= '<a href="/project/dublincore" class="btn btn-outline-secondary">'.msg('Set DC fields').'</a>';
 
         /************** Checando variaveis */
         for ($r = 0; $r < count($c[0]); $r++) {
@@ -547,7 +555,7 @@
         );
         return ($dc);
     }
-    function project_doublecore()
+    function project_dublincore()
     {
         $dc = dc();
         $prj = id_project();
@@ -565,13 +573,18 @@
             }
         }
         $sx = '';
-        $sx .= '<h2>' . msg('doublecore') . '</h2>';
+        $sx .= '<h2>' . msg('dublincore') . '</h2>';
 
         $sx .= '<form method="post">';
         $sx .= '<table class="table">';
-        $sx .= '<tr><th width="30%">' . msg('field') . '</th><th>' . msg('attribute') . '</th></tr>' . chr(10);
+        $sx .= '<tr><th>' . msg('attribute') . '</th><th width="30%">' . msg('field') . '</th></tr>' . chr(10);
         for ($r = 0; $r < count($csv[0]); $r++) {
             $sx .= '<tr>';
+
+            $sx .= '<td>';
+            $sx .= $csv[0][$r];
+            $sx .= '</td>';
+
             $sx .= '<td>';
             $sx .= '<select id="field' . $r . '" name="field' . $r . '">';
             $sx .= '<option value="-1">' . msg("none") . '</option>';
@@ -585,9 +598,7 @@
             }
             $sx .= '</select>';
             $sx .= '</td>';
-            $sx .= '<td>';
-            $sx .= $csv[0][$r];
-            $sx .= '</td>';
+
             $sx .= '<tr>' . chr(10);
         }
         $sx .= '</table>';
@@ -596,6 +607,14 @@
 
         $meta = json_encode($meta);
         file_put_contents($film, $meta);
+        if (isset($_POST["action"]))
+            {
+                $txt .= '<div class="col-12">';
+                $txt .= '<div class="alert alert-success" role="alert">'.msg('SAVED');
+                $txt .= '</div>';
+                $txt .= '</div>';                
+                $sx = $txt . $sx;
+            }
         return ($sx);
     }
     function project_dataset_view()
