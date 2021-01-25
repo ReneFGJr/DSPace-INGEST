@@ -415,7 +415,7 @@
     function new_dataset()
     {
         $sx = '<span class="btn btn-outline-primary" onclick="new_data_bt()">' . msg('btn_new_dataset') . '</span>';
-        $sx .= '<div style="display: none; margin-top: 50px; border:1px solid #000000; border-radius: 10px; padding: 20px;" id="new_dataset">';
+        $sx .= '<div style="display: block; margin-top: 50px; border:1px solid #000000; border-radius: 10px; padding: 20px;" id="new_dataset">';
         $sx .= '<h2>' . msg('File_upload') . '</h2>';
         $sx .= upload_file();
 
