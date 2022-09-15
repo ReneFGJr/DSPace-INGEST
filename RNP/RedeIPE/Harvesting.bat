@@ -1,0 +1,137 @@
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-dezembro-2012.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dadosbrutos_novembro_2012.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-outubro2012.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados_brutos_setembro2012.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-agosto2012.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-julho2012.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-junho2012.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-maio2012.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-abril2012.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-marco2012.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-fevereiro-2012.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-janeiro-2012.tgz
+
+wget https://memoria.rnp.br/_arquivo/ceo/dadosbrutosdez2013.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-novembro-2013.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-outubro-2013.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-setembro-2013.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-agosto-2013.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-julho-2013.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-junho-2013.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dadosbrutos-maio-2013.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-abril2013.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dadosbrutos_marco_2013.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-fevereiro-2013.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-janeiro-2013.tgz
+
+wget https://memoria.rnp.br/_arquivo/ceo/dadosbrutos-novembro-2014.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-out-2014.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-setembro-2014.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-agosto-2014-v1.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/dados-brutos-julho-2014.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-junho-2014.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-mai-2014.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/dados-brutos-abril-2014.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-marco-2014.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-fevereiro-2014.tgz
+wget https://memoria.rnp.br/_arquivo/ceo/Medicoes-rede-Ipe/dados-brutos-janeiro-2014.tgz
+
+==================== PHASE 2
+
+wget https://www.rnp.br/arquivos/documents/dadosbrutos-out-2015_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos052015_3.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos082015_1.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos-jul-2015_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos-jun-2015_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos032015_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos022015_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos042015_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos122015_1.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos092015_1.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos112015_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos-jan-2015_0.tgz
+
+wget https://www.rnp.br/arquivos/documents/dadosbrutos-dez-2016_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutosjan16_0_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos-jul-2016_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos-ago-2016_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos-out-2016_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos-abr-2016_1.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos-fev-2016_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutosjun2016_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos-nov-2016_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutosmai2016_1.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos-set-2016_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos-mar-2016_0.tgz
+
+wget https://www.rnp.br/arquivos/documents/dadosbrutos0917_1.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutosnov2017_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos052017_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos122017_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutosjul2017_0_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutosjan2017_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos042017_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos032017_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutosout2017_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos-fev-2017_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutosjun2017_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos082017_0.tgz
+
+wget https://www.rnp.br/arquivos/documents/dadosbrutos0918_1.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos-nov2018_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutosabr2018_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos062018_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos032018_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos012018_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutosmaio2018_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos-ago-2018_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos072018_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos122018_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos022018_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos0918_0.tgz
+== 3 ==
+wget https://www.rnp.br/arquivos/documents/dadosbrutosNOV2019.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos122019.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos102019.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos082019.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos062019.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos042019.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutosfev2019_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos092019.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutosJUL2019_2.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos052019_1.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutosmar2019.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos012019_2.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos012019_2.tgz
+
+wget https://www.rnp.br/arquivos/documents/dadosbrutosOUT2020.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos092020.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos_ago2020.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos062020.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutosmar2020.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos012020.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos112020_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos052020.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos0720.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutosabr2020.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutosfev2020.tgz
+
+wget https://www.rnp.br/arquivos/documents/dadosbrutos_nov21.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos102021.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos082021.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos072021.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutosABR2021.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutosfev2021.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos_dez21.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos092021.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos062021.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos052021.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos032021.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos012021.tgz
+
+wget https://www.rnp.br/arquivos/documents/dadosbrutos062022.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos042022_0.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos022022.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos052022.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos042022.tgz
+wget https://www.rnp.br/arquivos/documents/dadosbrutos012022.tgz
