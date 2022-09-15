@@ -61,7 +61,7 @@
             $id = project_select();
 
             if ((strlen($id) == 0) or ($id == '0')) {
-                //redirect ("/project/list"); 
+                //redirect ("/project/list");
             } else {
                 if ((is_array($path)) or (strlen($path) > 0)) {
                     echo show_project($id);
@@ -216,6 +216,7 @@
     function projects()
     {
         $dir = fls('projects');
+        $sx = '';
         $sx .= '<h4>' . msg('projects') . '</h4>';
         $sx .= '<ul>';
         for ($r = 0; $r < count($dir); $r++) {
@@ -287,17 +288,17 @@
             $f = $fls[$r];
             $file = $f[2];
             if ($f[3] == 'F') {
-                $link = '<a href="http://localhost:3333/'.$file.'" target="_new">';
+                $link = '<a href="http://localhost:3333/' . $file . '" target="_new">';
                 $linka = '</a>';
                 $txt .= '<tr>';
                 $txt .= '<td>';
-                $txt .= $link.$f[1].$linka;
+                $txt .= $link . $f[1] . $linka;
                 $txt .= '</td>';
 
                 $txt .= '<td align="right">';
                 $sz = filesize($file);
                 $size = $size + $sz;
-                $sz = $sz / 1024 / 1024;                
+                $sz = $sz / 1024 / 1024;
                 $txt .= number_format($sz, 1, ',', '.') . 'M Bytes';
                 $txt .= '</td>';
 
@@ -314,12 +315,12 @@
                 $txt .= '</tr>';
             }
         }
-        $sz = $size / 1024 / 1024;                
+        $sz = $size / 1024 / 1024;
         $size = number_format($sz, 1, ',', '.') . 'M Bytes';
-        $txt .= '<tr><th>Total '.$tot.' files</th><th class="text-right">Total '.$size.'</th></tr>';
+        $txt .= '<tr><th>Total ' . $tot . ' files</th><th class="text-right">Total ' . $size . '</th></tr>';
         $txt .= '</table>';
         $txt .= project_return();
-        $txt .= '<div class="alert alert-info" role="alert">'.msg('repository_file_info').'</div>';
+        $txt .= '<div class="alert alert-info" role="alert">' . msg('repository_file_info') . '</div>';
         return ($txt);
     }
 
@@ -369,16 +370,16 @@
     <input type="text" class="form-control" id="project_name" name="project_name" style="width: 20%;" value="' . $project_name . '">
     <small id="project_nameHelp" class="form-text text-muted">' . msg('project_name_info') . '.</small>
     <br/>
-    
+
     <label for="projectName">' . msg('project_title') . '</label>
     <input type="text" class="form-control" id="project_title" name="project_title" style="width: 100%;" value="' . $project_title . '">
     <small id="project_titleHelp" class="form-text text-muted">' . msg('project_title_info') . '.</small>
-    <br/>        
-    
+    <br/>
+
     <label for="projectName">' . msg('project_email') . '</label>
     <input type="email" class="form-control" id="project_email" name="project_email" style="width: 100%;" value="' . $project_email . '">
     <small id="project_nameHelp" class="form-text text-muted">' . msg('project_email_info') . '</small>
-    
+
     <br/>
     <br/>
     <input type="submit" class="btn btn-outline-primary" name="action" value="' . msg('save') . '">
@@ -408,7 +409,7 @@
             $sx .= '</div>';
         }
         /************************* NEW DATASET */
-        
+
         return ($sx);
     }
 
@@ -437,7 +438,7 @@
         $sx .= '<script>
             function new_data_bt()
             {
-                $("#checkit").toggle("slow");				
+                $("#checkit").toggle("slow");
                 $("#new_dataset").toggle("slow");
             }
             </script>';
@@ -495,12 +496,12 @@
                 $idv = substr($field, 5, 3);
                 $dcv = (string)($csv[0][$idv]);
                 $dcv = preg_replace('/u([\da-fA-F]{4})/', '&#x\1;', $dcv);
-                $dcv = str_replace('\\','',$dcv);
-                $sxmeta .= '<div class="col-md-3 text-center" style="border:1px solid #aaa;"><b>' . $dc[$value] . '</b><br> ' . $dcv.'</div>';
+                $dcv = str_replace('\\', '', $dcv);
+                $sxmeta .= '<div class="col-md-3 text-center" style="border:1px solid #aaa;"><b>' . $dc[$value] . '</b><br> ' . $dcv . '</div>';
             }
         }
         $sxmeta .= '</div>';
-        $sxmeta .= '<a href="/project/dublincore" class="btn btn-outline-secondary">'.msg('Set DC fields').'</a>';
+        $sxmeta .= '<a href="/project/dublincore" class="btn btn-outline-secondary">' . msg('Set DC fields') . '</a>';
 
         /************** Checando variaveis */
         for ($r = 0; $r < count($c[0]); $r++) {
@@ -607,14 +608,13 @@
 
         $meta = json_encode($meta);
         file_put_contents($film, $meta);
-        if (isset($_POST["action"]))
-            {
-                $txt .= '<div class="col-12">';
-                $txt .= '<div class="alert alert-success" role="alert">'.msg('SAVED');
-                $txt .= '</div>';
-                $txt .= '</div>';                
-                $sx = $txt . $sx;
-            }
+        if (isset($_POST["action"])) {
+            $txt .= '<div class="col-12">';
+            $txt .= '<div class="alert alert-success" role="alert">' . msg('SAVED');
+            $txt .= '</div>';
+            $txt .= '</div>';
+            $sx = $txt . $sx;
+        }
         return ($sx);
     }
     function project_dataset_view()
@@ -622,8 +622,8 @@
         $csv = read_json();
         $sx = '';
         $sx .= '
-    <b>Search the table for Course, Fees or Type:  
-        <input id="gfg" type="text" placeholder="Search here"  data-toggle="tooltip" title="Filtre os dados"> 
+    <b>Search the table for Course, Fees or Type:
+        <input id="gfg" type="text" placeholder="Search here"  data-toggle="tooltip" title="Filtre os dados">
         </b>';
         $sx .= '<table class="table">';
         $sx .= '<tbody id="hdgeeks">' . chr(10) . chr(13);
@@ -651,23 +651,23 @@
         $sx .= '</table>' . chr(10) . chr(13);
 
 
-        $sx .= '<script> 
-        $(document).ready(function() { 
-            $("#gfg").on("keyup", function() { 
-                var value = $(this).val().toLowerCase(); 
-                $("#geeks tr").filter(function() { 
-                    $(this).toggle($(this).text() 
-                    .toLowerCase().indexOf(value) > -1) 
-                }); 
-            }); 
-        }); 
-        
-        $(document).ready(function ()  
-        { 
-            $("[data-toggle=\'tooltip\']").tooltip(); 
-        }); 
-        
-        </script>      
+        $sx .= '<script>
+        $(document).ready(function() {
+            $("#gfg").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#geeks tr").filter(function() {
+                    $(this).toggle($(this).text()
+                    .toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+
+        $(document).ready(function ()
+        {
+            $("[data-toggle=\'tooltip\']").tooltip();
+        });
+
+        </script>
         ';
         return ($sx);
     }
@@ -682,13 +682,15 @@
         $prj = $_SESSION['project'];
         $prjds = 'collection';
         $d = 'projects/DIP';
-        if (!is_dir($d)) { mkdir ($d); }
+        if (!is_dir($d)) {
+            mkdir($d);
+        }
 
         /******************************** Diretorio DIP do projeto */
         $d .= '/' . $prj;
         if (!is_dir($d)) {
             $txt .= '<div class="col-12">';
-            $txt .= '<div class="alert alert-success" role="alert">'.msg('CREATED_DIP').' '.$d.'</div>';
+            $txt .= '<div class="alert alert-success" role="alert">' . msg('CREATED_DIP') . ' ' . $d . '</div>';
             $txt .= '</div>';
             mkdir($d);
         }
@@ -704,16 +706,15 @@
         $zipFile = "projects/DIP/" . $prj . "_dip.zip";
         $zipFile = "projects\\DIP\\" . $prj . "_dip.zip";
 
-        if (file_exists($zipFile))
-            {
-                $txt .= '<div class="col-12">';
-                $txt .= '<div class="alert alert-warning" role="alert">'.msg('DIP_FILE_REMOVED').'</div>';
-                $txt .= '</div>';                
-                unlink($zipFile);
-            }
+        if (file_exists($zipFile)) {
+            $txt .= '<div class="col-12">';
+            $txt .= '<div class="alert alert-warning" role="alert">' . msg('DIP_FILE_REMOVED') . '</div>';
+            $txt .= '</div>';
+            unlink($zipFile);
+        }
 
         $txt .= '<div class="col-12">';
-        $txt .= '<h2>Exportando para '.$zipFile.'</h2>';
+        $txt .= '<h2>Exportando para ' . $zipFile . '</h2>';
         $txt .= '</div>';
         if ($zip->open($zipFile, ZIPARCHIVE::CREATE) === FALSE) {
             echo "ERRO AO CRIAR ARQUIVO " . $zipFILE;
@@ -722,72 +723,68 @@
 
         /****************************************************** HTML */
         $txt .= '<div class="col-12">';
-        $txt .= '<ol>';        
-        $txt .= '<h5>Export</h5>';        
-        
+        $txt .= '<ol>';
+        $txt .= '<h5>Export</h5>';
+
         /************************************************************ DS */
-        for ($ri=0;$ri < count($ds);$ri++)
-            {
-                $line = $ds[$ri];
-                $id = $line[0];
-                
-                $pdf_file = $pdfs.'/'.$id.'.pdf';
-                if (file_exists($pdf_file))
-                    {
-                        $di = $d.'/'.$ri;
-                        $files = files_join($pdf_file);
+        for ($ri = 0; $ri < count($ds); $ri++) {
+            $line = $ds[$ri];
+            $id = $line[0];
 
-                        $txt .= '<li>'.$pdf_file.'</li>';
-                        /* Itens */
-                        $item = $d.'/'.$ri;
-                        if (!is_dir($item)) {
-                            mkdir($item);
-                        }
+            $pdf_file = $pdfs . '/' . $id . '.pdf';
+            if (file_exists($pdf_file)) {
+                $di = $d . '/' . $ri;
+                $files = files_join($pdf_file);
 
-                        $dr = '';
-                        $content = '';
-                        /* Licence */
-                        file_put_contents($item . '/license.txt', $licence);
+                $txt .= '<li>' . $pdf_file . '</li>';
+                /* Itens */
+                $item = $d . '/' . $ri;
+                if (!is_dir($item)) {
+                    mkdir($item);
+                }
 
-                        /* Doblincore */
-                        $dc_metadata = doblincore($line, $metadata);
-                        file_put_contents($item . '/dublin_core.xml', $dc_metadata);
+                $dr = '';
+                $content = '';
+                /* Licence */
+                file_put_contents($item . '/license.txt', $licence);
 
-                        /* Handle */
-                        $handle = handle($id);
-                        file_put_contents($item . '/handle', $handle);
+                /* Doblincore */
+                $dc_metadata = doblincore($line, $metadata);
+                file_put_contents($item . '/dublin_core.xml', $dc_metadata);
 
-                        /* Arquivos */
-                        for ($f=0;$f < count($files);$f++)
-                        {
-                            $dest = $item.'/'.file_name($files[$f]);
-                            $orig = $files[$f];
-                            $destZIP = $ri.'/'.file_name($files[$f]);
-                            if (file_exists($orig))
-                                {
-                                    copy($orig,$dest);
-                                    $content = file_contents($content,$dest);
-                                    $zip->addFile($dest, $destZIP);
-                                }
-                        }
-                        /* Licence */
-                        file_put_contents($item . '/contents', $content);
+                /* Handle */
+                $handle = handle($id);
+                file_put_contents($item . '/handle', $handle);
 
-                        /* ZIP */
-                        $zip->addFile($di . '/handle', $ri.'/'.'handle');
-                        $zip->addFile($di . '/dublin_core.xml', $ri.'/'.'dublin_core.xml');
-                        $zip->addFile($di . '/license.txt', $ri.'/'.'license.txt');
-                        $zip->addFile($di . '/contents', $ri.'/'.'contents');
+                /* Arquivos */
+                for ($f = 0; $f < count($files); $f++) {
+                    $dest = $item . '/' . file_name($files[$f]);
+                    $orig = $files[$f];
+                    $destZIP = $ri . '/' . file_name($files[$f]);
+                    if (file_exists($orig)) {
+                        copy($orig, $dest);
+                        $content = file_contents($content, $dest);
+                        $zip->addFile($dest, $destZIP);
                     }
+                }
+                /* Licence */
+                file_put_contents($item . '/contents', $content);
+
+                /* ZIP */
+                $zip->addFile($di . '/handle', $ri . '/' . 'handle');
+                $zip->addFile($di . '/dublin_core.xml', $ri . '/' . 'dublin_core.xml');
+                $zip->addFile($di . '/license.txt', $ri . '/' . 'license.txt');
+                $zip->addFile($di . '/contents', $ri . '/' . 'contents');
             }
+        }
         $txt .= '</ol>';
         $txt .= '</div>';
 
         /* Arquivo ZIP Fecha */
         $zip->close();
 
-        return($txt);
-        
+        return ($txt);
+
 
         /* HTML */
 
@@ -795,81 +792,72 @@
         $sx = '<div class="row">';
         $sx .= $txt;
         $sx .= '<div class="col-12">';
-        $sx .= '<div class="alert alert-info" role="alert">'.msg('repository_DIP').'</div>';
+        $sx .= '<div class="alert alert-info" role="alert">' . msg('repository_DIP') . '</div>';
         $sx .= '</div>';
         $sx .= '</div>';
-        return($sx);
+        return ($sx);
     }
 
     function file_name($f)
-        {
-            while ($pos = strpos($f,'/'))
-                {
-                    $f = substr($f,$pos+1,strlen($f));
-                }
-            return($f);
+    {
+        while ($pos = strpos($f, '/')) {
+            $f = substr($f, $pos + 1, strlen($f));
         }
+        return ($f);
+    }
 
     function files_join($pdf_file)
-        {
-            $f = array($pdf_file);
-            for ($r=0;$r < 1000;$r++)
-                {
-                    $pdfv = str_replace('.pdf','-'.$r.'.pdf',$pdf_file);
-                    if (file_exists($pdfv))
-                        {
-                            array_push($f,$pdfv);
-                        }
-                }
-            return($f);
+    {
+        $f = array($pdf_file);
+        for ($r = 0; $r < 1000; $r++) {
+            $pdfv = str_replace('.pdf', '-' . $r . '.pdf', $pdf_file);
+            if (file_exists($pdfv)) {
+                array_push($f, $pdfv);
+            }
         }
+        return ($f);
+    }
 
     function doblincore($line, $meta)
     {
         $dc = dc();
         $cr = chr(10);
         $sx = '<?xml version="1.0" encoding="utf-8" standalone="no"?>' . $cr;
-        $sx .= '<dublin_core schema="dc">' . $cr;
+$sx .= '<dublin_core schema="dc">' . $cr;
 
-        for ($r = 0; $r < count($meta); $r++) {
-            if ($meta['field' . $r] >= 0) {
-                $idm = $meta['field' . $r];
-                $fld = $dc[$idm];
-                $pre = substr($fld, 0, strpos($fld, '.'));
-                $quali = substr($fld, strpos($fld, '.') + 1, strlen($fld));
-                if (strlen($line[$r]) > 0)
-                {
-                $sx .= '<dcvalue element="' . $pre . '" qualifier="' . $quali . '">';
-                $sx .= ($line[$r]);
-                $sx .= '</dcvalue>' . $cr;
-                }
-            }
+    for ($r = 0; $r < count($meta); $r++) { if ($meta['field' . $r]>= 0) {
+        $idm = $meta['field' . $r];
+        $fld = $dc[$idm];
+        $pre = substr($fld, 0, strpos($fld, '.'));
+        $quali = substr($fld, strpos($fld, '.') + 1, strlen($fld));
+        if (strlen($line[$r]) > 0) {
+        $sx .= '<dcvalue element="' . $pre . '" qualifier="' . $quali . '">';
+            $sx .= ($line[$r]);
+            $sx .= '</dcvalue>' . $cr;
+        }
+        }
         }
         //$sx .= '<dcvalue element="identifier" qualifier="handle">'.$line['handle'].'</dcvalue>'.$cr;
         $sx .= '</dublin_core>' . $cr;
-        /* File name dublin_core.xml */
-        return ($sx);
-    }
+/* File name dublin_core.xml */
+return ($sx);
+}
 
-    function file_contents($fc='',$file='',$type='ORIGINAL')
-    {
-        $cr = chr(10);
-        if (strlen($fc) == 0)
-            {
-                $fc .= 'license.txt	bundle:LICENSE' . $cr;
-            }
+function file_contents($fc = '', $file = '', $type = 'ORIGINAL')
+{
+$cr = chr(10);
+if (strlen($fc) == 0) {
+$fc .= 'license.txt bundle:LICENSE' . $cr;
+}
 
-        $fc .= file_name($file).'	bundle:'.$type.'	description:'.file_name($file) . $cr;
-        return ($fc);
-    }
+$fc .= file_name($file) . ' bundle:' . $type . ' description:' . file_name($file) . $cr;
+return ($fc);
+}
 
-    function handle($id)
-    {
-        $pre = $_SESSION['project'].'.';
-        $pre = '100';
-        $idn = $id;
-        while (strlen($idn) < 8) { $idn = '0'.$idn; }
-        $handle = '20.500.11959/' . $pre . $idn;
-        $file = 'handle';
-        return ($handle);
+function handle($id)
+{
+$pre = $_SESSION['project'] . '.';
+$pre = '100';
+$idn = $id;
+while (strlen($idn) < 8) { $idn='0' . $idn; } $handle='20.500.11959/' . $pre . $idn; $file='handle' ; return ($handle);
     }
