@@ -92,7 +92,6 @@ class Projects extends Model
                     if (!file_exists($fd))
                         {
                             copy($fi, $fd);
-                            echo 'Copy '.$fi . '->' . $fd . '<br>';
                         }
 
                     $txt = 'license.txt	bundle:LICENSE'.cr();
@@ -153,6 +152,8 @@ class Projects extends Model
                     $sx .= '<td>';
                     $sx .= $ln[1];
                     $sx .= '</td>';
+
+                    pre($ln);
 
                     $file = $dt['source'] . trim($ln[1]);
                     $sx .= '<td>';
