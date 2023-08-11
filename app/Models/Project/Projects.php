@@ -79,8 +79,6 @@ class Projects extends Model
 
                 case 'tif':
                     $fo = $dt['source'].'tif/'.$fn;
-                    echo $fo;
-                    exit;
                     rename($fi,$fo);
                     break;
 
@@ -89,8 +87,11 @@ class Projects extends Model
                     $dird = $dir . '/DIP/item_' . strzero($nr, 5) . '/1/';
                     dircheck($dird);
                     $fd = $dird.$fn;
-                    copy($fi,$fd);
-                    echo $fi.'->'.$fd.'<br>';
+                    if (!file_exists($fd))
+                        {
+                            copy($fi, $fd);
+                            echo 'Copy '.$fi . '->' . $fd . '<br>';
+                        }
 
                     $txt = 'license.txt	bundle:LICENSE'.cr();
                     $txt .= $fn.'	bundle:ORIGINAL';
