@@ -113,8 +113,6 @@ class Projects extends Model
             //if (file_exist())
         }
 
-        pre($F);
-
         if (file_exists($file)) {
             $sx .= h($file);
             /* Line by Line */
