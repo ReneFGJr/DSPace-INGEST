@@ -74,8 +74,24 @@ class Projects extends Model
                 switch($ext)
                     {
                         case 'pdf':
-                            $dird = $dir . '/DIP/item_' . strzero($nr, 5);
+                            $nr++;
+                            $dird = $dir . '/DIP/item_' . strzero($nr, 5).'/1/';
                             dircheck($dird);
+
+                            $txt = 'license.txt	bundle:LICENSE'.cr();
+                            $txt .= $fs.'	bundle:ORIGINAL';
+
+                            /******************* DC */
+                    $dc = '<dublin_core schema="dc">';
+                    $dc .= '<dcvalue element="contributor" qualifier="editor" language="">Correio Official da Provincia de São Pedro</dcvalue>';
+                    $dc .= '<dcvalue element="date" qualifier="accessioned">'.date("Y-m-d").'T'.date("H:i:s").'Z'.'</dcvalue>';
+                    $dc .= '<dcvalue element="date" qualifier="available">' . date("Y-m-d") . 'T' . date("H:i:s") . 'Z' . '</dcvalue> ';
+                    $dc .= '<dcvalue element="title" qualifier="none" language="pt_BR">'.$dt[3].'</dcvalue>';
+                    $dc .= '</dublin_core>';
+                    pre($dc);
+
+
+
 
                     }
                 //if (file_exist())
