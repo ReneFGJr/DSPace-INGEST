@@ -64,6 +64,8 @@ class Projects extends Model
         dircheck($dir . '/jpg');
         dircheck($dir . '/DIP');
 
+        $F = [];
+
         $nr = 0;
 
         foreach ($ds as $id => $fs) {
@@ -84,6 +86,7 @@ class Projects extends Model
 
                 case 'pdf':
                     $nr++;
+                    $F[$fn] = $nr;
                     $dird = $dir . '/DIP/item_' . strzero($nr, 5) . '/1/';
                     dircheck($dird);
                     $fd = $dird.$fn;
@@ -111,7 +114,7 @@ class Projects extends Model
             //if (file_exist())
         }
 
-        $F = [];
+
         if (file_exists($file)) {
             $sx .= h($file);
             /* Line by Line */
