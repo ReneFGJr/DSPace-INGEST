@@ -112,6 +112,8 @@ class Projects extends Model
             //if (file_exist())
         }
 
+        $G = [];
+
         if (file_exists($file)) {
             $sx .= h($file);
             /* Line by Line */
@@ -158,6 +160,8 @@ class Projects extends Model
                     if (isset($F[$ln[1]]))
                         {
                             $sx .= ':)';
+                            $G[$ln[1]] = $F[$ln[1]];
+                            unlink($F[$dt[1]]);
                         } else {
                             $sx .= ':(';
                         }
@@ -181,6 +185,8 @@ class Projects extends Model
 
                 fclose($handle);
             }
+            pre($F,false);
+            pre($G);
         } else {
             echo "Erro ao abrir o arquivo $file";
             exit;
