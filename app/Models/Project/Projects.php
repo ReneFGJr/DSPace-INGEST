@@ -58,6 +58,9 @@ class Projects extends Model
         $sx = '<table class="table">';
         $file = $dt['dataCSV'];
         $file = "../_data/dataset/$file";
+        $ds = scandir($dt['source']);
+        pre($ds,false);
+        $F = [];
         if (file_exists($file)) {
             $sx .= h($file);
             /* Line by Line */
