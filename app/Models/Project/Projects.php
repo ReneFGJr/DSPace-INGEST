@@ -172,7 +172,7 @@ class Projects extends Model
 
                     $sx .= '</tr>';
 
-                    $ln++;
+                    $nl++;
                 }
 
                 fclose($handle);
