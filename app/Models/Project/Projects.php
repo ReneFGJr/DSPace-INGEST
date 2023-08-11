@@ -66,8 +66,9 @@ class Projects extends Model
 
         foreach($ds as $id=>$fs)
             {
-                $fi = $dt['source'].'/'.$fs;
-                echo h($fi);
+                $fi = $dt['source'].$fs;
+                $ext = substr($fi,strpos($fi,'.')+1,10);
+                echo h($fi.'='.$ext);
                 //if (file_exist())
             }
 
