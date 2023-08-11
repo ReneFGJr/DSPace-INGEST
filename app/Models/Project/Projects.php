@@ -161,7 +161,7 @@ class Projects extends Model
                         {
                             $sx .= ':)';
                             $G[$ln[1]] = $F[$ln[1]];
-                            unset($F[$dt[1]]);
+                            unset($F[$ln[1]]);
                         } else {
                             $sx .= ':(';
                         }
