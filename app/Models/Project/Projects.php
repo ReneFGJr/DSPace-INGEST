@@ -60,9 +60,8 @@ class Projects extends Model
         $file = "../_data/dataset/$file";
         $ds = scandir($dt['source']);
         $dir = trim($dt['source']);
-        dircheck($dir . '/tif');
-        dircheck($dir . '/jpg');
-        dircheck($dir . '/DIP');
+        dircheck($dir .'/tif', false);
+        dircheck($dir .'/DIP', false);
 
         $F = [];
 
@@ -88,7 +87,7 @@ class Projects extends Model
                     $nr++;
                     $F[$fn] = $nr;
                     $dird = $dir . '/DIP/item_' . strzero($nr, 5) . '/1/';
-                    dircheck($dird);
+                    dircheck($dird,false);
                     $fd = $dird.$fn;
                     if (!file_exists($fd))
                         {
@@ -184,7 +183,7 @@ class Projects extends Model
     function list()
     {
         $sx = '';
-        dircheck($this->dir);
+        dircheck($this->dir, false);
         $dir = scandir($this->dir);
         foreach ($dir as $id => $data) {
             if (strpos($data, '.prj')) {
