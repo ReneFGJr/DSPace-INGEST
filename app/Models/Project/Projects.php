@@ -155,7 +155,7 @@ class Projects extends Model
                     $sx .= '</td>';
 
                     $sx .= '<td>';
-                    if (isset($F[$dt[1]]))
+                    if (isset($F[$ln[1]]))
                         {
                             $sx .= ':)';
                         } else {
