@@ -133,7 +133,7 @@ class Projects extends Model
         foreach ($dir as $id => $data) {
             if (strpos($data, '.prj')) {
                 $data = troca($data, '.prj', '');
-                $sx .= anchor(PATH . '/project/select?id=' . $data);
+                $sx .= anchor(PATH . '/project/select?id=' . $data,$data);
                 $sx .= '<br>';
             }
         }

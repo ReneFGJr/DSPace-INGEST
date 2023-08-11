@@ -5,7 +5,8 @@ namespace App\Controllers;
 helper(['boostrap', 'url', 'sisdoc_forms', 'form', 'nbr', 'sessions', 'cookie']);
 $session = \Config\Services::session();
 
-define("PATH", "http://ingest");
+define("PATH", getenv("app.baseURL"));
+
 
 class Home extends BaseController
 {

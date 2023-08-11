@@ -62,6 +62,8 @@ class Index extends Model
                         return $Proj->list();
                     default:
                         echo "Ação inválida";
+                        echo '<hr>';
+                        echo anchor(PATH.'/projects','Projetos');
                 }
         }
 }
