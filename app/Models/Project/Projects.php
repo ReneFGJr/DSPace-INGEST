@@ -70,21 +70,19 @@ class Projects extends Model
             $fi = $dt['source'] . $fs;
             $ext = substr($fi, strpos($fi, '.') + 1, 10);
             $fn = $fi;
-            echo '======'.$fn;
             while(strpos(' '.$fn,'/') > 0)
                 {
-                    echo h('o-' . $fn);
                     $fn = substr($fn,strpos($fn,'/')+1,strlen($fn));
-                    echo h('--'.$fn);
                 }
-                exit;
+
             switch ($ext) {
                 case 'pdf':
                     $nr++;
                     $dird = $dir . '/DIP/item_' . strzero($nr, 5) . '/1/';
                     dircheck($dird);
                     $fd = $dird.$fn;
-                    rename($fi,$fd);
+                    copy($fi,$fd);
+                    echo $fi.'->'.$fd.'<br>';
 
                     /*
 
