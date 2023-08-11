@@ -59,9 +59,10 @@ class Projects extends Model
         $file = $dt['dataCSV'];
         $file = "../_data/dataset/$file";
         $ds = scandir($dt['source']);
-        dircheck($ds.'/tif');
-        dircheck($ds . '/jpg');
-        dircheck($ds . '/DIP');
+        $dir = trim($dt['source']);
+        dircheck($dir.'/tif');
+        dircheck($dir.'/jpg');
+        dircheck($dir.'/DIP');
 
         foreach($ds as $id=>$fs)
             {
