@@ -153,11 +153,15 @@ class Projects extends Model
                     $sx .= '<td>';
                     $sx .= $ln[1];
                     $sx .= '</td>';
-                    if ($nl > 0)
-                        {
-                        pre($ln);
-                        }
 
+                    $sx .= '<td>';
+                    if (isset($F[$dt[1]]))
+                        {
+                            $sx .= ':)';
+                        } else {
+                            $sx .= ':(';
+                        }
+                    $sx .= '</td>';
 
                     $file = $dt['source'] . trim($ln[1]);
                     $sx .= '<td>';
