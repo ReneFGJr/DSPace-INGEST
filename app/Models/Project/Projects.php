@@ -62,7 +62,14 @@ class Projects extends Model
         dircheck($ds.'/tif');
         dircheck($ds . '/jpg');
         dircheck($ds . '/DIP');
-        pre($ds,false);
+
+        foreach($ds as $id=>$fs)
+            {
+                $fi = $dt['source'].'/'.$fs;
+                echo h($fi);
+                //if (file_exist())
+            }
+
         $F = [];
         if (file_exists($file)) {
             $sx .= h($file);
