@@ -64,11 +64,20 @@ class Projects extends Model
         dircheck($dir.'/jpg');
         dircheck($dir.'/DIP');
 
+        $nr = 0;
+
         foreach($ds as $id=>$fs)
             {
                 $fi = $dt['source'].$fs;
                 $ext = substr($fi,strpos($fi,'.')+1,10);
                 echo h($fi.'='.$ext);
+                switch($ext)
+                    {
+                        case 'pdf':
+                            $dird = $dir . '/DIP/item_' . strzero($nr, 5);
+                            dircheck($dird);
+
+                    }
                 //if (file_exist())
             }
 
