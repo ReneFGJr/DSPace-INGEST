@@ -73,8 +73,9 @@ class Projects extends Model
             $fn = $fi;
             while(strpos($fn,'/'))
                 {
+                    echo h('o-' . $fn);
                     $fn = substr($fn,strpos($fn,'/')+1,strlen($fn));
-                    echo h($fn);
+                    echo h('--'.$fn);
                 }
                 exit;
             switch ($ext) {
