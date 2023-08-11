@@ -99,9 +99,7 @@ class Projects extends Model
                     $sx .= $ln[1];
                     $sx .= '</td>';
 
-                    pre($dt);
-
-                    $file = '"v:/2023/Livro01_P01/'.trim($ln[1]).'"';
+                    $file = $dt['source'].trim($ln[1]).'"';
                     $sx .= '<td>';
                     if (file_exists($file))
                         {
