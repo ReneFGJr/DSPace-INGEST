@@ -76,6 +76,14 @@ class Projects extends Model
                 }
 
             switch ($ext) {
+
+                case 'tif':
+                    $fo = $dt['source'].'/tif/'.$fn;
+                    echo $fo;
+                    exit;
+                    rename($fi,$fo);
+                    break;
+
                 case 'pdf':
                     $nr++;
                     $dird = $dir . '/DIP/item_' . strzero($nr, 5) . '/1/';
@@ -84,10 +92,9 @@ class Projects extends Model
                     copy($fi,$fd);
                     echo $fi.'->'.$fd.'<br>';
 
-                    /*
-
-                            $txt = 'license.txt	bundle:LICENSE'.cr();
-                            $txt .= $fs.'	bundle:ORIGINAL';
+                    $txt = 'license.txt	bundle:LICENSE'.cr();
+                    $txt .= $fn.'	bundle:ORIGINAL';
+                    file_put_contents($dird.'/license.txt',$txt);
 
                             /******************* DC */
                     /*
