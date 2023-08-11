@@ -185,8 +185,11 @@ class Projects extends Model
 
                 fclose($handle);
             }
-            pre($F,false);
-            pre($G);
+            if (count($F) > 0)
+                {
+                    echo "ERRO - Falta descrição no Items";
+                    pre($F);
+                }
         } else {
             echo "Erro ao abrir o arquivo $file";
             exit;
