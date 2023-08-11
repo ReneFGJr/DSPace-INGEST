@@ -115,6 +115,7 @@ class Projects extends Model
         if (file_exists($file)) {
             $sx .= h($file);
             /* Line by Line */
+            $nl = 0;
             $handle = fopen($file, "r");
             if ($handle) {
                 while (($line = fgets($handle)) !== false) {
@@ -152,8 +153,11 @@ class Projects extends Model
                     $sx .= '<td>';
                     $sx .= $ln[1];
                     $sx .= '</td>';
+                    if ($nl > 0)
+                        {
+                        pre($ln);
+                        }
 
-                    pre($ln);
 
                     $file = $dt['source'] . trim($ln[1]);
                     $sx .= '<td>';
@@ -167,6 +171,8 @@ class Projects extends Model
                     $sx .= '</td>';
 
                     $sx .= '</tr>';
+
+                    $ln++;
                 }
 
                 fclose($handle);
