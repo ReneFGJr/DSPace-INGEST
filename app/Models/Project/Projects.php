@@ -99,7 +99,7 @@ class Projects extends Model
                     $sx .= $ln[1];
                     $sx .= '</td>';
 
-                    pre($dt);
+                    pre($dt,false);
 
                     $file = $dt['source'].trim($ln[1]).'"';
                     $sx .= '<td>';
