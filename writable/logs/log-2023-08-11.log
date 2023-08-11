@@ -1,0 +1,491 @@
+CRITICAL - 2023-08-11 19:30:23 --> App\Controllers\Home::index(): Return value must be of type string, null returned
+in APPPATH\Controllers\Home.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-11 19:30:54 --> App\Controllers\Home::index(): Return value must be of type string, null returned
+in APPPATH\Controllers\Home.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 19:41:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:41:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:43:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:44:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:51:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:51:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:51:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:53:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:54:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 19:54:29 --> syntax error, unexpected token "}"
+in APPPATH\Models\Project\Projects.php on line 51.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\www\\DSPace-INGEST\\app\\Models\\Project\\Projects.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Project\\Projects')
+ 3 APPPATH\Models\Project\Index.php(50): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Project\\Projects')
+ 4 APPPATH\Controllers\Home.php(10): App\Models\Project\Index->index('projects', '', '', '')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('projects')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 19:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 19:54:36 --> Undefined constant "App\Models\Project\PATH"
+in APPPATH\Models\Project\Projects.php on line 50.
+ 1 APPPATH\Models\Project\Index.php(51): App\Models\Project\Projects->list()
+ 2 APPPATH\Controllers\Home.php(10): App\Models\Project\Index->index('projects', '', '', '')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('projects')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 19:55:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:57:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:57:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:58:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:58:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:59:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 19:59:42 --> Undefined variable $sx
+in APPPATH\Models\Project\Index.php on line 55.
+ 1 APPPATH\Models\Project\Index.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sx', 'D:\\www\\DSPace-INGEST\\app\\Models\\Project\\Index.php', 55)
+ 2 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 19:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:59:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 19:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:00:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:02:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:02:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:02:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:02:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:03:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:05:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:05:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:05:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:05:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:07:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:07:53 --> The route for "/project/run" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/project/run')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(68): redirect('/project/run', 'refresh')
+ 4 APPPATH\Models\Project\Index.php(55): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:10:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:10:19 --> The route for "/project/run" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/project/run')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(73): redirect('/project/run', 'refresh')
+ 4 APPPATH\Models\Project\Index.php(60): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:10:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:10:20 --> The route for "/project/run" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/project/run')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(73): redirect('/project/run', 'refresh')
+ 4 APPPATH\Models\Project\Index.php(60): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:10:21 --> The route for "/project/run" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/project/run')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(73): redirect('/project/run', 'refresh')
+ 4 APPPATH\Models\Project\Index.php(60): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:10:21 --> The route for "/project/run" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/project/run')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(73): redirect('/project/run', 'refresh')
+ 4 APPPATH\Models\Project\Index.php(60): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:11:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:11:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:11:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:11:38 --> The route for "index/run" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('index/run')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(73): redirect('index/run', 'refresh')
+ 4 APPPATH\Models\Project\Index.php(60): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:11:48 --> The route for "/project/run" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/project/run')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(73): redirect('/project/run', 'refresh')
+ 4 APPPATH\Models\Project\Index.php(60): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:12:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:12:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:12:30 --> The route for "/main" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/main')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(73): redirect('/main', 'refresh')
+ 4 APPPATH\Models\Project\Index.php(60): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:12:59 --> The route for "/projects" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/projects')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(73): redirect('/projects', 'refresh')
+ 4 APPPATH\Models\Project\Index.php(60): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:12:59 --> The route for "/projects" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/projects')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(73): redirect('/projects', 'refresh')
+ 4 APPPATH\Models\Project\Index.php(60): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:14:20 --> The route for "/projects" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/projects')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(72): redirect('/projects')
+ 4 APPPATH\Models\Project\Index.php(60): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:14:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:14:21 --> The route for "/projects" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/projects')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(72): redirect('/projects')
+ 4 APPPATH\Models\Project\Index.php(60): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:14:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:14:21 --> The route for "/projects" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/projects')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(72): redirect('/projects')
+ 4 APPPATH\Models\Project\Index.php(60): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:14:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:14:21 --> The route for "/projects" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/projects')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(72): redirect('/projects')
+ 4 APPPATH\Models\Project\Index.php(60): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:14:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:14:21 --> The route for "/projects" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/projects')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(72): redirect('/projects')
+ 4 APPPATH\Models\Project\Index.php(60): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:14:29 --> The route for "/projects/" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/projects/')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(72): redirect('/projects/')
+ 4 APPPATH\Models\Project\Index.php(60): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:14:43 --> The route for "/home/" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/home/')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(72): redirect('/home/')
+ 4 APPPATH\Models\Project\Index.php(60): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:14:44 --> The route for "/home/" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/home/')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(72): redirect('/home/')
+ 4 APPPATH\Models\Project\Index.php(60): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:14:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:14:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:14:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:15:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:15:11 --> The route for "http://ingest" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('http://ingest')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(72): redirect('http://ingest')
+ 4 APPPATH\Models\Project\Index.php(60): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:15:41 --> The route for "index" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('index')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(72): redirect('index')
+ 4 APPPATH\Models\Project\Index.php(60): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:15:46 --> The route for "/index" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/index')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(72): redirect('/index')
+ 4 APPPATH\Models\Project\Index.php(60): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(12): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:16:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:16:29 --> The route for "/index" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/index')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(72): redirect('/index')
+ 4 APPPATH\Models\Project\Index.php(57): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(15): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:16:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:16:30 --> The route for "/index" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/index')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Models\Project\Projects.php(72): redirect('/index')
+ 4 APPPATH\Models\Project\Index.php(57): App\Models\Project\Projects->select('livro_01')
+ 5 APPPATH\Controllers\Home.php(15): App\Models\Project\Index->index('select', '', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('select')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:17:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:17:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:17:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:17:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:18:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:18:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:18:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:18:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:19:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:20:36 --> file_get_contents({&quot;project&quot;:&quot;NuPergs&quot;,&quot;subproject&quot;:&quot;Livro 01&quot;,&quot;source&quot;:&quot;v:\/2023\/&quot;,&quot;dataCSV&quot;:&quot;V:\\datasets\\project_livro_01.csv&quot;}): Failed to open stream: No such file or directory
+in APPPATH\Models\Project\Projects.php on line 49.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents({&quot;project&quot;:&quot;NuPergs&quot;,&quot;subproject&quot;:&quot;Livro 01&quot;,&quot;source&quot;:&quot;v:\\/2023\\/&quot;,&quot;dataCSV&quot;:&quot;V:\\\\datasets\\\\project_livro_01.csv&quot;}): Failed to open stream: No such file or directory', 'D:\\www\\DSPace-INGEST\\app\\Models\\Project\\Projects.php', 49)
+ 2 APPPATH\Models\Project\Projects.php(49): file_get_contents('{"project":"NuPergs","subproject":"Livro 01","source":"v:\\/2023\\/","dataCSV":"V:\\\\datasets\\\\project_livro_01.csv"}')
+ 3 APPPATH\Models\Project\Index.php(49): App\Models\Project\Projects->run()
+ 4 APPPATH\Controllers\Home.php(15): App\Models\Project\Index->index('run', '', '', '')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('run')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:20:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:21:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:21:47 --> Undefined constant "App\Models\Project\file"
+in APPPATH\Models\Project\Projects.php on line 60.
+ 1 APPPATH\Models\Project\Projects.php(51): App\Models\Project\Projects->df([...])
+ 2 APPPATH\Models\Project\Index.php(49): App\Models\Project\Projects->run()
+ 3 APPPATH\Controllers\Home.php(15): App\Models\Project\Index->index('run', '', '', '')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('run')
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:21:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:22:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:22:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:22:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:23:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:23:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:23:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:24:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:24:04 --> syntax error, unexpected single-quoted string ";", expecting ")"
+in APPPATH\Models\Project\Projects.php on line 77.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\www\\DSPace-INGEST\\app\\Models\\Project\\Projects.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Project\\Projects')
+ 3 APPPATH\Models\Project\Index.php(48): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Project\\Projects')
+ 4 APPPATH\Controllers\Home.php(15): App\Models\Project\Index->index('run', '', '', '')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('run')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:24:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:27:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:27:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:27:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:29:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:29:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:34:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:34:16 --> Undefined variable $c
+in APPPATH\Models\Project\Projects.php on line 72.
+ 1 APPPATH\Models\Project\Projects.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $c', 'D:\\www\\DSPace-INGEST\\app\\Models\\Project\\Projects.php', 72)
+ 2 APPPATH\Models\Project\Projects.php(51): App\Models\Project\Projects->df([...])
+ 3 APPPATH\Models\Project\Index.php(49): App\Models\Project\Projects->run()
+ 4 APPPATH\Controllers\Home.php(15): App\Models\Project\Index->index('run', '', '', '')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('run')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:35:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:36:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-11 20:36:52 --> Undefined variable $c
+in APPPATH\Models\Project\Projects.php on line 94.
+ 1 APPPATH\Models\Project\Projects.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $c', 'D:\\www\\DSPace-INGEST\\app\\Models\\Project\\Projects.php', 94)
+ 2 APPPATH\Models\Project\Projects.php(51): App\Models\Project\Projects->df([...])
+ 3 APPPATH\Models\Project\Index.php(49): App\Models\Project\Projects->run()
+ 4 APPPATH\Controllers\Home.php(15): App\Models\Project\Index->index('run', '', '', '')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index('run')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-11 20:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:37:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:40:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:41:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:43:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:46:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:47:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:48:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:48:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:48:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:50:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:50:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:50:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-11 20:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
