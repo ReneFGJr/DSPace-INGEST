@@ -99,7 +99,7 @@ class Projects extends Model
                     $sx .= $ln[1];
                     $sx .= '</td>';
 
-                    pre($_SESSION);
+                    pre($dt);
 
                     $file = '"v:/2023/Livro01_P01/'.trim($ln[1]).'"';
                     $sx .= '<td>';
