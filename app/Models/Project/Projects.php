@@ -71,7 +71,7 @@ class Projects extends Model
             $ext = substr($fi, strpos($fi, '.') + 1, 10);
             $fn = $fi;
             echo '======'.$fn;
-            while(strpos($fn,'/'))
+            while(strpos(' '.$fn,'/') > 0)
                 {
                     echo h('o-' . $fn);
                     $fn = substr($fn,strpos($fn,'/')+1,strlen($fn));
