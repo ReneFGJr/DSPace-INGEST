@@ -60,28 +60,38 @@ class Projects extends Model
         $file = "../_data/dataset/$file";
         $ds = scandir($dt['source']);
         $dir = trim($dt['source']);
-        dircheck($dir.'/tif');
-        dircheck($dir.'/jpg');
-        dircheck($dir.'/DIP');
+        dircheck($dir . '/tif');
+        dircheck($dir . '/jpg');
+        dircheck($dir . '/DIP');
 
         $nr = 0;
 
-        foreach($ds as $id=>$fs)
-            {
-                $fi = $dt['source'].$fs;
-                $ext = substr($fi,strpos($fi,'.')+1,10);
-                echo h($fi.'='.$ext);
-                switch($ext)
-                    {
-                        case 'pdf':
-                            $nr++;
-                            $dird = $dir . '/DIP/item_' . strzero($nr, 5).'/1/';
-                            dircheck($dird);
+        foreach ($ds as $id => $fs) {
+            $fi = $dt['source'] . $fs;
+            $ext = substr($fi, strpos($fi, '.') + 1, 10);
+            echo h($fi . '=' . $ext);
+            $fn = $fi;
+            while(strpos($fn,'/'))
+                {
+                    $fn = substr($fn,strpos($fn,'/')+1,strlen($fn));
+                    echo h($fn);
+                }
+                exit;
+            switch ($ext) {
+                case 'pdf':
+                    $nr++;
+                    $dird = $dir . '/DIP/item_' . strzero($nr, 5) . '/1/';
+                    dircheck($dird);
+                    $fd = $dird.$fn;
+                    rename($fi,$fd);
+
+                    /*
 
                             $txt = 'license.txt	bundle:LICENSE'.cr();
                             $txt .= $fs.'	bundle:ORIGINAL';
 
                             /******************* DC */
+                    /*
                     $dc = '<dublin_core schema="dc">';
                     $dc .= '<dcvalue element="contributor" qualifier="editor" language="">Correio Official da Provincia de São Pedro</dcvalue>';
                     $dc .= '<dcvalue element="date" qualifier="accessioned">'.date("Y-m-d").'T'.date("H:i:s").'Z'.'</dcvalue>';
@@ -89,13 +99,10 @@ class Projects extends Model
                     $dc .= '<dcvalue element="title" qualifier="none" language="pt_BR">'.$dt[3].'</dcvalue>';
                     $dc .= '</dublin_core>';
                     pre($dc);
-
-
-
-
-                    }
-                //if (file_exist())
+                    */
             }
+            //if (file_exist())
+        }
 
         $F = [];
         if (file_exists($file)) {
@@ -139,15 +146,14 @@ class Projects extends Model
                     $sx .= $ln[1];
                     $sx .= '</td>';
 
-                    $file = $dt['source'].trim($ln[1]);
+                    $file = $dt['source'] . trim($ln[1]);
                     $sx .= '<td>';
-                    if (file_exists($file))
-                        {
-                            $sx .= "OK";
-                        } else {
-                            $sx .= 'ERRO-';
-                            $sx .= $file;
-                        }
+                    if (file_exists($file)) {
+                        $sx .= "OK";
+                    } else {
+                        $sx .= 'ERRO-';
+                        $sx .= $file;
+                    }
 
                     $sx .= '</td>';
 
@@ -173,7 +179,7 @@ class Projects extends Model
         foreach ($dir as $id => $data) {
             if (strpos($data, '.prj')) {
                 $data = troca($data, '.prj', '');
-                $sx .= anchor(PATH . '/project/select?id=' . $data,$data);
+                $sx .= anchor(PATH . '/project/select?id=' . $data, $data);
                 $sx .= '<br>';
             }
         }
