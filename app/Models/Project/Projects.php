@@ -59,6 +59,9 @@ class Projects extends Model
         $file = $dt['dataCSV'];
         $file = "../_data/dataset/$file";
         $ds = scandir($dt['source']);
+        dircheck($ds.'/tif');
+        dircheck($ds . '/jpg');
+        dircheck($ds . '/DIP');
         pre($ds,false);
         $F = [];
         if (file_exists($file)) {
