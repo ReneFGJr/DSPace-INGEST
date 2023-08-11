@@ -78,7 +78,7 @@ class Projects extends Model
             switch ($ext) {
 
                 case 'tif':
-                    $fo = $dt['source'].'/tif/'.$fn;
+                    $fo = $dt['source'].'tif/'.$fn;
                     echo $fo;
                     exit;
                     rename($fi,$fo);

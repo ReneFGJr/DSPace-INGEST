@@ -138,12 +138,12 @@ function LowerCaseSQL($term)
 
 
 /* checa e cria diretorio */
-function dircheck($dir)
+function dircheck($dir,$index=1)
 {
-    return checkdirs($dir);
+    return checkdirs($dir,$index);
 }
 
-function checkdirs($dir)
+function checkdirs($dir,$index)
 {
     $dirs = troca($dir,'\\','/');
     $dirs = explode('/', $dir);
@@ -153,9 +153,12 @@ function checkdirs($dir)
             $dir .= $dirs[$r] . '/';
             if (!is_dir($dir)) {
                 mkdir($dir);
-                $rlt = fopen($dir . '/index.php', 'w');
-                fwrite($rlt, 'acesso restrito');
-                fclose($rlt);
+                if ($index)
+                    {
+                        $rlt = fopen($dir . '/index.php', 'w');
+                        fwrite($rlt, 'acesso restrito');
+                        fclose($rlt);
+                    }
             }
         }
     return "";
